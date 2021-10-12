@@ -87,10 +87,12 @@ async function retrievePublishedOnly() {
         posted_time: item.published_at,
       });
     });
+    return data;
   } catch (error) {
     console.log(error);
     return;
   }
 }
 
+// retrievePosts();
 // updatePost();
