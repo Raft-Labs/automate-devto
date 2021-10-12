@@ -1,0 +1,22 @@
+{
+  "name": "automate-devto",
+  "version": "1.0.0",
+  "description": "Automate making blogs published on dev.to",
+  "main": "src/automate.js",
+  "scripts": {
+    "start": "node src/automate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-work:Raft-Labs/automate-devto.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^10.0.0"
+  }
+}
