@@ -4,9 +4,11 @@ import chalk from "chalk";
 
 dotenv.config();
 
-const ENV = "DEV";
+let API_KEY;
 
-const API_KEY = ENV === "DEV" ? process.env.DEVTO_DEV : process.env.DEVTO_PROD;
+if (process.argv[2] !== undefined) {
+  API_KEY = process.argv[2];
+}
 
 // Returns all drafts of a user
 async function retrievePosts() {
@@ -60,7 +62,7 @@ async function updatePost() {
     const outputString = `Published post: ${chalk.yellow(
       data.title
     )}\nYou can check the post at ${chalk.cyan(data.url)}`;
-
+    console.log(outputString);
     return outputString;
   } catch (error) {
     console.log(error);
@@ -94,5 +96,8 @@ async function retrievePublishedOnly() {
   }
 }
 
-// retrievePosts();
-// updatePost();
+try {
+  updatePost();
+} catch (error) {
+  console.log(error);
+}
