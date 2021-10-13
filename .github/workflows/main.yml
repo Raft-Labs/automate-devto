@@ -1,0 +1,20 @@
+name: Automate dev.to posts
+
+on:
+  schedule:
+    - cron: "30 16 */5 * *"
+
+jobs:
+  start:
+    name: Start
+    runs-on: ubuntu-latest
+    container:
+      image: node:stretch-slim
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install packages
+        run: npm i
+      - name: Run
+        run: npm run startTestRun ${{ secrets.DEVTO_API_KEY }}
