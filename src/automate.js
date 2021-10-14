@@ -13,7 +13,7 @@ if (process.argv[2] !== undefined) {
 // Returns all drafts of a user
 async function retrievePosts() {
   const names = [];
-  const url = "https://dev.to/api/articles/me/unpublished";
+  const url = "https://dev.to/api/articles/me/unpublished?per_page=1000";
 
   return axios
     .get(url, {
@@ -30,7 +30,6 @@ async function retrievePosts() {
           published: item.published,
         })
       );
-
       return names;
     });
 }
