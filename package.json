@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github-work:Raft-Labs/automate-devto.git"
+    "url": "git@github.com:Raft-Labs/automate-devto.git"
   },
   "type": "module",
   "keywords": [],
