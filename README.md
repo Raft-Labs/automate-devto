@@ -1,5 +1,5 @@
 # automate-devto
-This repo with the help of `GitHub Actions` runs after a interval and publishes a draft article made on `dev.to`
+This repo with the help of `GitHub Actions` runs after a interval (every 5 days at 4:30pm) and publishes a draft article made on `dev.to`
 
 The API key is stored into this repo's `Secrets.`
 
